@@ -1,6 +1,6 @@
 module.exports = {
   ensureAuth: function (req, res, next) {
-    console.log("AUTH isauthenticated middleware", req.isAuthenticated());
+    // console.log("AUTH isauthenticated middleware", req.isAuthenticated());
     if (req.isAuthenticated()) {
       return next();
     } else {
@@ -9,7 +9,7 @@ module.exports = {
   },
 
   ensureGuest: function (req, res, next) {
-    console.log("GUEST is authenticated middleware", req.isAuthenticated());
+    // console.log("GUEST is authenticated middleware", req.isAuthenticated());
     if (req.isAuthenticated()) {
       res.redirect("/dashboard");
     } else {
